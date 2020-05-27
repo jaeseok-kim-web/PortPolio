@@ -1,0 +1,516 @@
+:root {
+    --background-color: #221DB5;
+    --text-color: #f0f4f5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro';
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-size: 20px;
+}
+
+span {
+    font-size: 30px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+
+/* header 시작 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 10px;
+    position: fixed;
+    width:100%;
+    z-index:10;
+}
+
+.header_logo {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.header_logo img {
+    width: 20px;
+    height: 20px;
+}
+
+.header_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+
+}
+.header_toggleBtn {
+    position: absolute;
+    right: 30px;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+}
+
+#button {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+#button a {
+    position: relative;
+    transition: all .45s ease-out;
+}
+
+#underline {
+    width: 100%;
+    height: 2.5px;
+    margin-top: 15px;
+    align-self: flex-end;
+    left: -200px;
+    background: var(--text-color);
+    position: absolute;
+    transition: all .3s ease-Out;
+    bottom: 0;
+}
+
+#button:hover #underline {
+    left: 0;
+}
+
+.header_menu li {
+    padding: 8px 11px;
+}
+
+.header_menu>a {
+    width: 50px;
+    text-decoration: none;
+    padding: 8px 11px;
+}
+
+
+.introduce {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    background: url(./img/content-main.jpg);
+    width: 100%;
+}
+
+/* content 시작 */
+#content--main {
+}
+
+#content--main .introduce span {
+    color: var(--text-color);
+    text-transform: uppercase;
+    display: block;
+
+}
+
+#content--main .greet {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: url(./img/content-main.jpg);
+    position: relative;
+    animation: text 5s 1;
+    animation-iteration-count: infinite;
+}
+
+#content--main .name {
+    font-size: 25px;
+}
+
+@keyframes text {
+    0% {
+        color: #000;
+        margin-bottom: -40px;
+    }
+
+    30% {
+        letter-spacing: 50px;
+        margin-bottom: -30px;
+    }
+
+    85% {
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    font-size: 5em;
+    
+}
+
+#content--about {
+    display: block;
+    text-align: center;
+}
+
+#content--about .about {
+    border-bottom: 1px solid #D4D4D4;
+}
+
+#content--about .about-main {
+    display: flex;
+    width: 95%;
+    height: 300px;
+    margin: 0 30px;
+}
+
+#content--about .about-main .about-left {
+    flex:1;
+    height: 300px;
+    display: block;
+    border-right: 1px solid #D4D4D4;
+}
+
+#content--about .about-main .about-left>p {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#content--about .about-main .about-left img {
+    margin: 0 auto;
+}
+
+#content--about .about-main .about-center {
+    flex:2;
+    height: 300px;
+    position: relative;
+    border-left: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4;
+}
+
+#content--about .about-main .about-center .privacy {
+    position: absolute;
+    margin: 20px 70px;
+}
+
+#content--about .about-main .about-center span {
+    font-weight: bold;
+}
+
+#content--about .about-main .about-center ul li {
+    line-height: 15px;
+}
+
+#content--about .about-main .about-right {
+    flex:2;
+    height: 300px;
+    position: relative;
+    border-right: 1px solid #D4D4D4;
+}
+
+#content--about .about-main .about-right .privacy {
+    position: absolute;
+    margin: 20px 70px;
+}
+
+#content--about .about-main .about-right span {
+    font-weight: bold;
+}
+
+#content--about .about-main .about-right ul li {
+    line-height: 20px;
+}
+
+#content--skill {
+    display: block;
+    text-align: center;
+}
+#content--skill .about-skill{
+    position: relative;
+}
+#content--skill .about-skill .skill {
+    border-bottom: 1px solid #D4D4D4;
+}
+
+#content--skill .about-skill .graph {
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 40px;   
+    margin-left:300px;
+    margin-bottom: 70px; 
+}
+#content--skill .about-skill  .html5{
+    position: absolute;
+    left:30px;
+    top:150px;
+    width:70px;
+    height:100px;
+    
+}
+#content--skill .about-skill  .css3{
+    position: absolute;
+    left:30px;
+    top:270px;
+    width:70px;
+    height:100px;  
+}
+#content--skill .about-skill  .javascript{
+    position: absolute;
+    left:20px;
+    top:390px;
+    width:100px;
+    height:100px;  
+}
+#content--skill .about-skill  .bootstrap{
+    position: absolute;
+    left:20px;
+    top:510px;
+    width:100px;
+    height:100px;  
+}
+#content--skill .about-skill  .database{
+    position: absolute;
+    left:20px;
+    top:630px;
+    width:100px;
+    height:100px;  
+}
+
+#content--skill .about-skill .graph span {
+    display: block;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    border-radius: 40px;
+    box-sizing: border-box;
+    color: #fff;
+}
+#content--skill .about-skill .stack1 span{
+    background: #FF3636; animation: stack1 2s infinite;
+}
+#content--skill .about-skill .stack2 span{
+    background: #0100FF; animation: stack2 2s infinite;
+}
+#content--skill .about-skill .stack3 span{
+    background: #FFE400; animation: stack3 2s infinite;
+}
+#content--skill .about-skill .stack4 span{
+    background: #5C1DB5; animation: stack4 2s infinite;
+}
+#content--skill .about-skill .stack5 span{
+    background: #FF00DD; animation: stack5 2s infinite;
+}
+@keyframes stack1 {
+    0%{ width: 0; color:rgba(255,255,255,0);}
+    40%{color:rgba(255,255,255,1);}
+    100%{ width:80%; }
+    
+}   
+@keyframes stack2 {
+    0%{ width: 0; color:rgba(255,255,255,0);}
+    40%{color:rgba(255,255,255,1);}
+    100%{ width:80%; }
+    
+}  
+@keyframes stack3 {
+    0%{ width: 0; color:rgba(255,255,255,0);}
+    40%{color:rgba(255,255,255,1);}
+    100%{ width:60%; }
+    
+}
+@keyframes stack4 {
+    0%{ width: 0; color:rgba(255,255,255,0);}
+    40%{color:rgba(255,255,255,1);}
+    100%{ width:85%; }
+    
+}
+@keyframes stack5 {
+    0%{ width: 0; color:rgba(255,255,255,0);}
+    40%{color:rgba(255,255,255,1);}
+    100%{ width:90%; }
+    
+}
+
+#content--portpolio {
+    display: block;
+    text-align: center;
+    width:100%;
+    height:100%;
+}
+#content--portpolio .about-portpolio {
+    border-bottom: 1px solid #D4D4D4;
+}
+#content--portpolio .portpolio1{
+    display:flex;
+    border-bottom: 1px solid #D4D4D4;
+}
+#content--portpolio .portpolio1 .description1{
+    flex:1;
+}
+#content--portpolio .portpolio1 .description1 h3{
+    font-size: 40px;
+}
+#content--portpolio .portpolio1 .description1 a >p{
+    width:200px;
+    height:50px;
+    margin:0 auto;
+    padding-top:10px;
+    background-color: salmon;
+}
+#content--portpolio .portpolio1 .image1{
+    flex:1;
+}
+#content--portpolio .portpolio2{
+    display:flex;
+}
+#content--portpolio .portpolio2 .description2{
+    flex:1;
+    position: relative;
+}
+#content--portpolio .portpolio2 .description2 h3{
+    font-size: 40px;
+}
+#content--portpolio .portpolio2 .image2{
+    flex:1;
+}
+#content--portpolio .portpolio2 .description2 a >p{
+    width:200px;
+    height:50px;
+    margin:0 auto;
+    padding-top:10px;
+    background-color: salmon;
+}
+#content--contact {
+    display: block;
+    text-align: center;
+}
+
+#content--contact .contact {
+    border-bottom: 1px solid #D4D4D4;
+}
+
+
+/* footer시작 */
+footer {
+    padding: 10px;
+    background-color: #858585;
+    text-align: center;
+    color: var(--text-color);
+}
+
+@media all and (max-width: 768px) {
+    span,p{
+        font-size: 15px;
+    }
+    header {
+        width:468px;
+    }
+    .header_menu{
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+    }
+    .header_menu li {
+        text-align: center;
+    }
+    .header_toggleBtn {
+        display: block;
+    }
+    .header_menu.active{
+        display:flex;
+    } 
+    #content--main .introduce{
+        width:95%;
+    }
+    #content--main .greet {
+        font-size: 30px;
+        font-weight: bold;
+        animation: text 3s 1;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes text {
+        0% {
+            color: #000;
+            margin-bottom: -40px;
+        }
+    
+        30% {
+            letter-spacing: 10px;
+            margin-bottom: -30px;
+        }
+    
+        85% {
+            letter-spacing: 8px;
+            margin-bottom: -40px;
+        }
+    } 
+    #content--about .about-main{
+        display:block;
+    }
+    #content--about .about-main .about-left img{
+        margin:0 auto;
+    }
+    #content--about .about-main .about-center{
+        border:none;
+    }
+    #content--about .about-main .about-center .privacy{
+        text-align: center;
+        margin-left:90px;
+        margin-top:-90px;
+    }
+    #content--about .about-main .about-right{
+        border:none;
+    }
+    #content--about .about-main .about-right .privacy{
+        position: static;
+        text-align: center;
+        margin-left:10px;
+        margin-top:-150px;
+    }
+    #content--portpolio .portpolio1{
+        display:block;
+    }
+    #content--portpolio .portpolio1 .description1 h3{
+        font-size: 30px;
+    }
+    #content--portpolio .portpolio1 .image1 img{
+        width:400px;
+        height:440px;
+    }
+    #content--portpolio .portpolio2{
+        display:block;
+    }
+    #content--portpolio .portpolio2 .description2 h3{
+        font-size: 30px;
+    }
+    #content--portpolio .portpolio2 .image2 img{
+        margin-top: 50px;
+        width:400px;
+        height:440px;
+    }
+}
