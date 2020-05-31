@@ -426,7 +426,7 @@ footer {
         font-size: 15px;
     }
     header {
-        width:468px;
+        width:100%;
     }
     .header_menu{
         display:none;
@@ -472,25 +472,23 @@ footer {
     #content--about .about-main{
         display:block;
     }
+    #content--about .about-main .about-left{
+        height:50px;
+    }
     #content--about .about-main .about-left img{
         margin:0 auto;
     }
     #content--about .about-main .about-center{
+        margin-top:150px;
         border:none;
     }
     #content--about .about-main .about-center .privacy{
         text-align: center;
-        margin-left:90px;
-        margin-top:-90px;
-    }
-    #content--about .about-main .about-right{
-        border:none;
+        margin-left:150px;
     }
     #content--about .about-main .about-right .privacy{
-        position: static;
         text-align: center;
-        margin-left:10px;
-        margin-top:-150px;
+        margin-top:-90px;
     }
     #content--portpolio .portpolio1{
         display:block;
